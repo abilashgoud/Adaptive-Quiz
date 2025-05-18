@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 96%; /* Light Grayish Blue */
+    --foreground: 220 15% 20%; /* Dark Slate Gray */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+ 
+    --primary: 260 70% 60%; /* Vibrant Purple */
+    --primary-foreground: 0 0% 100%; /* White */
+ 
+    --secondary: 220 10% 65%; /* Medium Gray */
+    --secondary-foreground: 0 0% 100%; /* White */
+ 
+    --muted: 220 10% 88%; /* Light Gray */
+    --muted-foreground: 220 10% 45%; /* Medium-Dark Gray */
+ 
+    --accent: 340 80% 60%; /* Bright Pink/Magenta */
+    --accent-foreground: 0 0% 100%; /* White */
+ 
+    --destructive: 0 70% 55%; /* Strong Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 220 10% 80%; /* Grayish Border */
+    --input: 220 10% 90%; /* Light Gray Input BG */
+    --ring: 260 70% 65%; /* Slightly lighter Purple for focus */
+ 
+    --radius: 0.75rem; /* Increased border radius for a softer look */
+  }
+ 
+  .dark {
+    --background: 220 15% 10%; /* Very Dark Blue */
+    --foreground: 220 10% 85%; /* Light Gray for text */
+ 
+    --card: 220 15% 15%; /* Darker Card BG */
+    --card-foreground: 220 10% 85%;
+ 
+    --popover: 220 15% 15%;
+    --popover-foreground: 220 10% 85%;
+ 
+    --primary: 260 75% 65%; /* Slightly brighter Purple */
+    --primary-foreground: 220 15% 10%; /* Dark text on primary */
+ 
+    --secondary: 220 10% 30%; /* Dark Gray */
+    --secondary-foreground: 220 10% 85%;
+ 
+    --muted: 220 10% 25%; /* Darker Muted BG */
+    --muted-foreground: 220 10% 60%; /* Lighter Muted Text */
+ 
+    --accent: 340 85% 65%; /* Brighter Accent */
+    --accent-foreground: 220 15% 10%;
+ 
+    --destructive: 0 75% 60%; /* Brighter Destructive Red */
+    --destructive-foreground: 220 15% 10%;
+ 
+    --border: 220 10% 25%; /* Darker Border */
+    --input: 220 10% 20%; /* Dark Input BG */
+    --ring: 260 75% 70%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-white/30 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+  .neumorphism-concave {
+    @apply rounded-xl bg-background shadow-[inset_5px_5px_10px_#c5c5c5,inset_-5px_-5px_10px_#ffffff];
+  }
+  .dark .neumorphism-concave {
+     @apply rounded-xl bg-background shadow-[inset_5px_5px_10px_#1a1a2e,inset_-5px_-5px_10px_#2e2e4a];
+  }
+   .neumorphism-convex {
+    @apply rounded-xl bg-background shadow-[5px_5px_10px_#c5c5c5,_-5px_-5px_10px_#ffffff];
+  }
+  .dark .neumorphism-convex {
+     @apply rounded-xl bg-background shadow-[5px_5px_10px_#1a1a2e,_-5px_-5px_10px_#2e2e4a];
+  }
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary via-accent to-purple-400 text-transparent bg-clip-text;
+  }
+}

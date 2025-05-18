@@ -1,7 +1,5 @@
 # Adaptive Quiz Application
 
-![Adaptive Quiz Banner](public/adaptive-quiz-banner.png)
-
 ## 🚀 Overview
 
 Adaptive Quiz is an intelligent quiz application that dynamically adjusts question difficulty based on user performance. Built with React and modern UI libraries, it offers a personalized learning experience by presenting increasingly challenging questions as users demonstrate proficiency.
@@ -116,10 +114,6 @@ The application is fully responsive and works well on:
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgements
 
